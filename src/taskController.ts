@@ -9,6 +9,10 @@ export type Task = {
 let tasks: Task[] = [];
 let nextId = 1;
 
+export function helloPing(_req: Request, res: Response) {
+  res.status(200).json({ message: 'pong' });
+}
+
 export function getTasks(_req: Request, res: Response) {
   res.json(tasks);
 }

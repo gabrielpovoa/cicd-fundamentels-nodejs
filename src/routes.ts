@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import {
+  helloPing,
   getTasks,
   getTaskById,
   createTask,
@@ -9,6 +10,7 @@ import {
 
 const router = Router();
 
+router.get('/ping', helloPing);
 router.get('/tasks', getTasks);
 router.get('/tasks/:id', getTaskById);
 router.post('/tasks', createTask);
